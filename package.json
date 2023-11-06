@@ -13,11 +13,11 @@
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@tailwindcss/forms": "^0.5.6",
     "@tsconfig/svelte": "^5.0.0",
+    "active-table": "^1.0.14",
     "autoprefixer": "^10.4.16",
     "flowbite": "^2.0.0",
     "flowbite-svelte": "^0.44.19",
     "flowbite-svelte-icons": "^0.4.5",
-    "postcss": "^8.4.31",
     "svelte": "^4.0.5",
     "svelte-check": "^3.4.6",
     "tailwindcss": "^3.3.5",
@@ -26,6 +26,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "pocketbase": "^0.19.0"
+    "pocketbase": "^0.19.0",
+    "svelte-tabs": "^1.1.0"
   }
 }

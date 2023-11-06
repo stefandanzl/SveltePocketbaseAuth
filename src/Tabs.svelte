@@ -1,47 +1,45 @@
 <script>
-    //@ts-nocheck
-    import { Tabs, TabItem, Timeline, TimelineItem, Button } from 'flowbite-svelte';
-    import { ArrowRightOutline } from 'flowbite-svelte-icons';
-  </script>
-  
+    //@ts-ignore
+    import { Tabs, Tab, TabList, TabPanel } from 'svelte-tabs';
+  import Fahrzeuge from './Fahrzeuge.svelte';
+  </script> 
+   <div class="w-full tabs top-0 right-0 mt-3 mr-3 items-center space-x-4">
   <Tabs>
-    <TabItem open>
-      <span slot="title">Profile</span>
-      <Timeline>
-        <TimelineItem title="Application UI code in Tailwind CSS" date="February 2022">
-          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-          <Button color="alternative">
-            Learn more
-            <ArrowRightOutline class="ml-2 w-3 h-3" />
-          </Button>
-        </TimelineItem>
-        <TimelineItem title="Application UI code in Tailwind CSS" date="March 2022">
-          <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
-        </TimelineItem>
-        <TimelineItem title="Application UI code in Tailwind CSS" date="April 2022">
-          <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
-        </TimelineItem>
-      </Timeline>
-    </TabItem>
-    <TabItem>
-      <span slot="title">Dashboard</span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Dashboard:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
-    <TabItem>
-      <span slot="title">Settings</span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Settings:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
-    <TabItem>
-      <span slot="title">Users</span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Users:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
+    <TabList class="w-full tabs">
+      <Tab >Fahrzeuge</Tab>
+      <Tab >Zubehör</Tab>
+      <Tab >Wartung</Tab>
+      <Tab >Mitarbeiter</Tab>
+    </TabList>
+   
+    <TabPanel>
+      <h2>Fahrzeuge</h2>
+      <Fahrzeuge/>
+    </TabPanel>
+   
+    <TabPanel>
+      <h2>Zubehör</h2>
+    </TabPanel>
+   
+    <TabPanel>
+      <h2>Wartung</h2>
+    </TabPanel>
+
+
+    <TabPanel>
+        <h2>Mitarbeiters</h2>
+      </TabPanel>
   </Tabs>
+</div>
+
+
+
+  <style>
+    .tabs {
+        border: 1px;
+        border-color: beige;
+        width: 100% !important;
+        position: absolute;
+    }
+
+  </style>
