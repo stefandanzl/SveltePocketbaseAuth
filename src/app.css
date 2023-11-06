@@ -130,3 +130,8 @@ border-top: #646cff;
 
 
 }
+
+:global(.buttons){
+  position:absolute;
+  
+}

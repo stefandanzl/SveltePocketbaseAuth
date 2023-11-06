@@ -11,7 +11,7 @@
     }
   </script>
   
-  <div  class="flex flex-row absolute top-0 right-0 mt-1 mr-3 items-center space-x-4">
+  <div  class="flex z-10 flex-row absolute top-0 right-0 mt-1 mr-3 items-center space-x-4">
     <p>{$currentUser?.email}</p>
     <button
       class="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mt-2"
@@ -21,3 +21,7 @@
       Sign Out
     </button>
   </div>
+
+  <style>
+
+  </style>

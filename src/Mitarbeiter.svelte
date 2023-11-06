@@ -20,26 +20,17 @@ onMount(() => {
 
 async function getData(){
     try {
-    const records = await pb.collection('vehicles').getFullList({
+    const records = await pb.collection('dummyusers').getFullList({
       sort: '-created',
     });
-
     // Now you can work with the 'records' data
-    console.log(records);
-
-    let output = [["Beschreibung","Marke","Type"]]
-    // let output = [["","",""]]
+    let output = [["Beschreibung","Fahrzeug","Art"]]
 
     for (var r in records){
-        console.log("r",r)
-        output.push([records[r].kennZeichen,records[r].make,records[r].model])
+        // console.log("r",r)
+        output.push([records[r].firstName,records[r].lastName,records[r].email])
     }
-
-    
-    
-    // tabler.updateContent(output);
     return output;
-    
   } catch (error) {
     // Handle any errors that may occur during the data retrieval
     console.error(error);
@@ -74,17 +65,17 @@ auxiliaryStyle={
     }`}
 
 stickyHeader={true}
-
+isHeaderTextEditable= {false}
 customColumnsSettings={[
-    { "headerName": "Kennzeichen",  "availableDefaultColumnTypes": ["Text"],"defaultText": "Neues Auto", "cellStyle": {"width": "150px"}, "isHeaderTextEditable": false },
-    { "headerName": "Marke", "availableDefaultColumnTypes": ["Text"], "defaultColumnTypeName": "text", "isHeaderTextEditable": false },
-    { "headerName": "Type",  "defaultColumnTypeName": "Select", "isHeaderTextEditable": false },
-    { "headerName": "Date Created", "cellStyle": {"backgroundColor": "#f1f1f1"}, "defaultColumnTypeName": "Date d-m-y", "isHeaderTextEditable": false }
+    { "headerName": "Kennzeichen",  "availableDefaultColumnTypes": ["Text"],"defaultText": "Neues Auto"},
+    { "headerName": "Marke", "availableDefaultColumnTypes": ["Text"], "defaultColumnTypeName": "text"},
+    { "headerName": "Type",  "defaultColumnTypeName": "Select",  },
+    { "headerName": "Date Created",  "defaultColumnTypeName": "Date d-m-y" }
   ]}
 
-rowHoverStyles={{"style":{"backgroundColor": "#d6d6d630", "transitionDuration": "0.05s"}}}
+rowHoverStyles={{"style":{"backgroundColor": "#d6d6d630", "transitionDuration": "0.1s"}}}
     
-
+overflow={{"maxHeight": "85vh", "maxWidth": "85vw"}}
     
     
     />
