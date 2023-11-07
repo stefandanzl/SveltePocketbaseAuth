@@ -89,7 +89,7 @@ button:focus-visible {
 
 
 :global(.svelte-tabs li.svelte-tabs__selected){
-
+  background-color: #535bf2 !important;
 
 
 
@@ -107,7 +107,7 @@ button:focus-visible {
 :global(.svelte-tabs li.svelte-tabs__tab){
 
 border-top: #646cff;
-
+background-color: #535bf2 !important;
 
 
 }
@@ -115,7 +115,7 @@ border-top: #646cff;
 
 
 :global(.svelte-tabs li.svelte-tabs__selected){
-
+  background-color: #535bf2 !important;
 
 
 
@@ -125,7 +125,7 @@ border-top: #646cff;
 
 :global(.svelte-tabs div.svelte-tabs__tab-panel){
   width: 100%;
-
+  background-color: #535bf2 !important;
 
 
 
@@ -133,5 +133,5 @@ border-top: #646cff;
 
 :global(.buttons){
   position:absolute;
-  
+  background-color: #535bf2 !important;
 }

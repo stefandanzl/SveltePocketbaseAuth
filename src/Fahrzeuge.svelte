@@ -62,7 +62,7 @@ var content = []
     <active-table on:keydown={handleInput} id="active-table" bind:this={tabler}
     
     content={content}
-
+    displayAddNewRow={false}
 auxiliaryStyle={
     `::-webkit-scrollbar {
       width: 10px;
@@ -74,6 +74,9 @@ auxiliaryStyle={
     }`}
 
 stickyHeader={true}
+
+displayAddNewColumn={false}
+
 
 customColumnsSettings={[
     { "headerName": "Kennzeichen",  "availableDefaultColumnTypes": ["Text"],"defaultText": "Neues Auto", "cellStyle": {"width": "150px"}, "isHeaderTextEditable": false },

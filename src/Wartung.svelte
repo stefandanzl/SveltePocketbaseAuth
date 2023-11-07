@@ -54,6 +54,9 @@ var content = []
     
     content={content}
 
+    displayAddNewColumn={false}
+    displayAddNewRow={false}
+
 auxiliaryStyle={
     `::-webkit-scrollbar {
       width: 10px;
